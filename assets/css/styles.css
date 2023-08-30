@@ -42,10 +42,12 @@ a {
     font-size: 1.4rem;
     text-align: center;
     color: #ffffff;
+    transition: all 0.3s ease;
 }
 
 .btn:hover {
     opacity: 0.9;
+    scale: 1.05;
 }
 
 .line-clamp {
@@ -88,10 +90,23 @@ a {
     font-size: 1.4rem;
     color: #4f5361;
     padding: 8px 14px;
+    transition: all 0.3s ease;
 }
 
 .navbar ul a:hover {
     text-decoration: underline;
+    text-shadow: 0 0 0.5px var(--primary-color);
+}
+
+.navbar ul li,
+.navbar .actions .action-link {
+    transition: all 0.3s ease;
+}
+
+.navbar ul li:hover,
+.navbar .actions .action-link:hover {
+    scale: 1.1;
+    text-shadow: 0 0 0.5px var(--primary-color);
 }
 
 .navbar .actions {
@@ -186,6 +201,7 @@ a {
     padding: 0 41px;
     height: 91px;
     border-radius: 12px;
+    transition: all 0.3s ease;
 }
 
 .clients .images a:hover {
@@ -258,6 +274,12 @@ a {
     font-weight: 600;
     font-size: 1.4rem;
     color: #0689ff;
+    transition: all 0.3s ease;
+}
+
+.guide-item .link:hover {
+    scale: 1.1;
+    color: var(--primary-color);
 }
 
 .guide-item .arrow {
@@ -307,6 +329,12 @@ a {
     font-weight: 600;
     font-size: 1.8rem;
     color: #0689ff;
+    transition: all 0.3s ease;
+}
+
+.featured .link:hover {
+    scale: 1.1;
+    color: var(--primary-color);
 }
 
 .featured .link .arrow {
@@ -314,7 +342,8 @@ a {
 }
 
 .featured .list {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 70px;
 }
@@ -323,6 +352,13 @@ a {
     flex: 1;
     background: #fff;
     border-radius: 12px;
+    transition: all 0.3s ease;
+}
+
+.featured .item:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    transform: translateY(-5px);
+    cursor: pointer;
 }
 
 .featured .item .thumb {
@@ -359,6 +395,7 @@ a {
     display: flex;
     align-items: center;
     margin-top: 21px;
+    width: 100%;
 }
 
 .featured .item .icon {
@@ -473,7 +510,7 @@ a {
 
 .stats .info .sub-title {
     position: relative;
-    width: 269px;
+    width: 270px;
     font-weight: 600;
     font-size: 3.5rem;
     line-height: 1.29;
@@ -592,7 +629,7 @@ a {
 }
 
 .footer .row-top {
-    gap: 185px;
+    column-gap: 185px;
 }
 
 .footer .heading {
@@ -609,6 +646,14 @@ a {
 
 .footer .item {
     margin-top: 18px;
+}
+
+.footer .item a {
+    transition: all 0.3s ease;
+}
+
+.footer .item a:hover {
+    color: var(--primary-color);
 }
 
 .footer .item a,
